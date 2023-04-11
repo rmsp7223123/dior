@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dior</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +14,6 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/design.css" />
-    <title>Dior</title>
   </head>
   <body>
     <h1 class="d-none">Dior 웹사이트 메인</h1>
@@ -26,17 +27,20 @@
         </div>
       </div>
       <div class="search_form">
-        <form autocomplete="off">
+        <form autocomplete="off" id="my_form">
           <fieldset>
             <legend class="d-none">상품 검색 폼</legend>
             <label for="keyword" class="screen_out">검색어</label>
-            <input
-              type="text"
-              name="keyword"
-              id="keyword"
-              placeholder="Jadore in joy를 검색하세요."
-            />
-            <button typle="submit">serach</button>
+            <div class="search">
+              <input
+                type="text"
+                name="keyword"
+                id="keyword"
+                placeholder="Jadore in joy를 검색하세요."
+                maxlength="30"
+              />
+              <button type="submit">serach</button>
+            </div>
           </fieldset>
         </form>
       </div>
@@ -68,12 +72,31 @@
       </article>
       <article>
         <h3 class="article-title">reviews</h3>
+        <div class="reviews">
+          <div><img src="images/review_img1.jpg" alt=""></div>
+          <div><img src="images/review_img2.jpg" alt=""></div>
+          <div><img src="images/review_img3.jpg" alt=""></div>
+        </div>
       </article>
     </section>
     <footer>
-      <div class="logo"></div>
-      <ul class="links"></ul>
-      <p></p>
+      <div class="logo2">
+        <img src="images/footer_logo.png" alt="">
+      </div>
+      <ul class="links">
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">배송조회</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+      </ul>
+      <p>copyright &copy; <span class="brand">dior</span>. all rights reserved</span></p>
     </footer>
+    <script>
+      const form = document.querySelector("#my_form")
+      form.addEventListener("submit", function(e){
+        e.preventDefault(); //기본 이벤트(e)를 중지
+        alert("검색어를 입력하세요!");
+        document.querySelector("#keyword").focus();
+      });
+    </script>
   </body>
 </html>
