@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/design.css" />
+    <title>Dior</title>
+  </head>
+  <body>
+    <h1 class="d-none">Dior 웹사이트 메인</h1>
+    <header>
+      <div class="header-wrap">
+        <div class="video-wrap">
+          <video src="media/intro.mp4" autoplay muted loop></video>
+        </div>
+        <div class="logo">
+          <img src="images/logo.png" alt="Dior 브랜드 아이덴티티" />
+        </div>
+      </div>
+      <div class="search_form">
+        <form autocomplete="off">
+          <fieldset>
+            <legend class="d-none">상품 검색 폼</legend>
+            <label for="keyword" class="screen_out">검색어</label>
+            <input
+              type="text"
+              name="keyword"
+              id="keyword"
+              placeholder="Jadore in joy를 검색하세요."
+            />
+            <button typle="submit">serach</button>
+          </fieldset>
+        </form>
+      </div>
+    </header>
+    <nav>
+      <ul id="gnb">
+        <!--global navigation bar-->
+        <li>
+          <a href="#">향수</a>
+          <ul class="lnb">
+            <!--local navigation bar-->
+            <li><a href="#">남성용</a></li>
+            <li><a href="#">여성용</a></li>
+          </ul>
+        </li>
+        <li><a href="#">메이크업</a></li>
+        <li><a href="#">스킨케어</a></li>
+      </ul>
+    </nav>
+    <section class="main">
+      <h2 class="d-none">Dior 베스트 아이템과 사용후기</h2>
+      <article>
+        <h3 class="article-title">best item</h3>
+        <div class="items">
+          <img src="images/best_img1.jpg" alt="">
+          <img src="images/best_img2.jpg" alt="">
+          <img src="images/best_img3.jpg" alt="">
+        </div>
+      </article>
+      <article>
+        <h3 class="article-title">reviews</h3>
+      </article>
+    </section>
+    <footer>
+      <div class="logo"></div>
+      <ul class="links"></ul>
+      <p></p>
+    </footer>
+  </body>
+</html>
